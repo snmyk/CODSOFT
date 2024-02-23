@@ -4,8 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Tech</title>
+    <link rel="stylesheet" href="SmartTech.css">
 </head>
 <body>
-    
+    <div class="header">
+        <nav>
+            <ul class="default-menu">
+                <li>
+                    <img id="logo" src="images/smart-tv-icon.png" alt="Smart Tech">
+                    <h1>Tech</h1>
+                </li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Forum</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li class="menu-container" id="menu-container" onclick="displaySidebar()"><img id="menu-icon" src="images/menu.svg" alt="menu"></li>  
+            </ul>
+            <ul class="sidebar" id="sidebar" style="display: none;">
+                <li class="close-container" id="close-container" onclick="hideSidebar()"><img id="close-icon" src="images/close.svg" alt="menu"></li> 
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Forum</a></li>  
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+    </div>
+    <script src="SmartTech.js"></script>
 </body>
 </html>
