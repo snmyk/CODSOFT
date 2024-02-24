@@ -140,6 +140,7 @@ section div:nth-of-type(1) h1
     letter-spacing: 10px;
     position: absolute;
     z-index: 10;
+    animation: company-name 0.7s ease-in-out 0s 1 normal none;
 }
 section div:nth-of-type(2)
 {
@@ -152,6 +153,8 @@ section div:nth-of-type(2)
 .intro-img
 {
     flex: 0.92;
+    perspective: 1000px;
+    overflow: hidden;
 }
 
 .intro
@@ -168,6 +171,7 @@ section div:nth-of-type(2)
     color: hsl(0, 0%, 100%);
     word-spacing: 1.01rem;
     margin: 35% 1px 0px 25px;
+    animation: intro-h3 0.6s ease-out 0s 1 normal none;
 }
 .intro p:nth-of-type(1), .intro p:nth-of-type(2)
 {
@@ -180,19 +184,90 @@ section div:nth-of-type(2)
 .intro p:nth-of-type(1)
 {
     font-size: 1.7rem;
+    animation: intro-p1 0.6s ease-in-out 0s 1 normal none;
 }
 .intro p:nth-of-type(2)
 {
     font-size: 1.5rem;
+    animation: intro-p2 0.6s ease-in-out 0s 1 normal none;
 }
 .intro-img img
 {
     width: 100%;
     height: 100%;
+    transform: translateX(100%);
+    animation: intro-img 0.6s ease 0s 1 normal forwards;
 }
-
-
-
+@keyframes company-name 
+{
+    from
+    {
+        transform: translateX(-150px);
+        
+    }
+    to
+    {
+        transform: translateX(0);
+        
+    }    
+}
+@keyframes intro-h3 
+{
+    from
+    {
+        transform: translateX(-150px);
+        color: hsla(60, 4%, 5%, 0.863);
+        font-size: 1.5rem;
+        
+    }
+    to
+    {
+        transform: translateX(0);
+        
+    } 
+}
+@keyframes intro-p1 
+{
+    from
+    {
+        transform: translateX(2rem);
+        color: white;
+        font-size: 1.5rem;
+        transform: scale(1.5, 1.5);
+        
+    }
+    to
+    {
+        transform: translateX(0);
+        
+    } 
+}
+@keyframes intro-p2 
+{
+    from
+    {
+        transform: translateX(-150px);
+        color: white;
+        font-size: 1.5rem;
+        
+        
+    }
+    to
+    {
+        transform: translateX(0);
+        
+    } 
+}
+@keyframes intro-img 
+{
+    0% {
+        
+        transform: translateX(100%) rotateY(90deg);
+    }
+    100% {
+        transform: translateX(0) rotateY(0);
+    }
+}
 
 
 
