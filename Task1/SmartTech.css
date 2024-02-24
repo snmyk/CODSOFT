@@ -46,7 +46,7 @@ nav
     right: 0;
     z-index: 999;
     background-color: hsla(0, 0%, 50%, 0.856);
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(15px);
 }
 .default-menu li, .sidebar li
 {
@@ -121,14 +121,14 @@ nav
     transform: scale(1.01, 1.02);
     box-shadow: 2px 3px 2px -1.5px hsla(0, 0%, 0%, 0.411);;
 }
-section
+.intro-section
 {
     
     height: 100vh;
     position: relative;
 
 }
-section div:nth-of-type(1) h1
+.intro-section div:nth-of-type(1) h1
 {
     font-family: "Anta", sans-serif;
     font-weight: 700;
@@ -142,7 +142,7 @@ section div:nth-of-type(1) h1
     z-index: 10;
     animation: company-name 0.7s ease-in-out 0s 1 normal none;
 }
-section div:nth-of-type(2)
+.intro-section div:nth-of-type(2)
 {
     display: flex;
     justify-content: center;
@@ -196,8 +196,49 @@ section div:nth-of-type(2)
     width: 100%;
     height: 100%;
     transform: translateX(100%);
-    animation: intro-img 0.6s ease 0s 1 normal forwards;
+    animation: intro-img 2.2s ease 0s 1 normal forwards;
 }
+
+.about-section
+{
+    width: 100%;
+    height: 350px;
+}
+.about-section h3
+{
+    padding: 15px 40% 20px 40%;
+    width: fit-content;
+    font-family: "Anta", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15rem;
+    word-spacing: 0.4rem;
+}
+.about-section p
+{
+    font-family: "dosis", sans-serif;
+    font-weight: 500;
+    font-size: 1.7rem;
+    padding: 2px 10% 15px 10%;
+    line-height: 40px;
+}
+.target.active 
+{
+    transform: translateX(0);
+    animation: about-section-animation 1s ease-out 0s 1 normal none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 @keyframes company-name 
 {
     from
@@ -268,7 +309,18 @@ section div:nth-of-type(2)
         transform: translateX(0) rotateY(0);
     }
 }
-
+@keyframes about-section-animation 
+{
+    from
+    {
+        transform: translateY(100px);
+    }
+    to
+    {
+        transform: translateY(0px);
+    }
+    
+}
 
 
 
