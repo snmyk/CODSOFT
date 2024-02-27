@@ -1,4 +1,5 @@
 import { products, currency } from "./Products.js";
+import { testimonials } from "./Testimonials.js";
 
 const defaultMenu = document.getElementById("menu-container");
 const sidebar = document.getElementById("sidebar");
@@ -7,19 +8,23 @@ const introP1 = document.getElementById("intro-p1");
 const introP2 = document.getElementById("intro-p2");
 const introh3 = document.getElementById("intro-h3");
 const introh1 = document.getElementById("intro-h1");
-const productGrid = document.getElementById("product-grid-js");
 
 
 //Function to display the sidebar menu when the menu is clicked
-const displaySidebar = () =>
+export const displaySidebar = () =>
 {
     sidebar.removeAttribute('style');
-}
+};
+
 //Function to hide the sidebar menu when the x icon is clicked
-const hideSidebar = () =>
+export const hideSidebar = () =>
 {
     sidebar.setAttribute('style', 'display:none');
-}
+};
+//Make the displaySidebar and hideSidebar function globally accessible
+defaultMenu.addEventListener("click", displaySidebar);
+sidebarIcon.addEventListener("click", hideSidebar);
+
 //The following timeout functions executes a call back function that activates the desired animation after a certain duration
 setTimeout(() => {
     introh1.removeAttribute('style');
@@ -95,7 +100,7 @@ products.forEach((product) =>
         </div>
         <div class = "product-price">
             <p>$</p>
-            <p>${currency(product.price)}</p>
+            <p class="price">${currency(product.price)}</p>
 
         </div>
     </section>
@@ -103,5 +108,37 @@ products.forEach((product) =>
 });
 
 document.querySelector('.product-grid').innerHTML = productData;
+document.querySelectorAll('.price').forEach((p) =>
+{
+    let text = p.textContent;
+    p.setAttribute('text-data', text.slice(0, -2));
+    p.innerHTML = text.slice(0, -2) + '<span>' + text.slice(-2) + '</span>';
+});
+
+let testimonyData = '';
+testimonials.forEach((testimony) =>{
+    testimonyData += `
+        <div class = "card">
+            <img id="quotes" src = "images/Icons/quote.svg" alt = "">
+            <div class = "testimonial">
+                ${testimony.testimony}
+            </div>
+            <div class = "details-container">
+                <div>
+                    <img src = ${testimony.imageUrl} alt = "Avatar">
+                </div>
+                <div class="name-occupation">
+                    <h3>${testimony.name}</h3>
+                    <p>${testimony.occupation}</p>
+                </div>
+                
+                
+            </div>
+        
+        </div>
+    ` 
+})
+
+document.querySelector(".testimonies-section").innerHTML = testimonyData;
 
 
