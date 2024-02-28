@@ -314,19 +314,28 @@ span
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease-in-out;
+    animation: testimonial-animation 2s ease 1s infinite normal none;
 }
 .card
 {
     width: 300px;
     height: 400px;
     margin: 15px 15px 30px 40px;
-    background-color: red;
+    background-color: hsla(33, 100%, 88%, 0.603);
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 300px;
     display: grid;
-    grid-template-rows: 0.3fr 2fr 1fr;
-    
-    
+    grid-template-rows: 0.3fr 2fr 1fr; 
+    border-radius: 10px;  
+    cursor: pointer;
 }
+.card:hover 
+{
+    box-shadow: 5px 5px 3px -2px hsla(0, 0%, 0%, 0.473);
+    transform: scale(1.05, 1.05);   
+}
+
 #quotes
 {
     width: 25px;
@@ -358,6 +367,25 @@ span
 {
     padding: 15px 0px 15px 15px;
     font-family: "Roboto", sans-serif;
+}
+.scroll-button
+{
+    width: 20px;
+    height: 30px;
+    background-color: rgba(128, 128, 128, 0.425);
+    cursor: pointer;
+    border-width: 0.5px;
+}
+.scroll-img
+{
+    width: 20px;
+    height: 30px;
+}
+.scroll-button:hover
+{
+    transform: scale(1.1, 1.1);
+    box-shadow: 3px 3px 2px -2px hsla(0, 0%, 0%, 0.87);
+    
 }
 
 
@@ -447,6 +475,18 @@ span
     to
     {
         transform: translateY(0px);
+    }
+    
+}
+@keyframes testimonial-animation
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+    100%
+    {
+        transform: translateX(calc(var(--index) * - var(--testimonialWidth)px));
     }
     
 }

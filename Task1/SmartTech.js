@@ -8,6 +8,11 @@ const introP1 = document.getElementById("intro-p1");
 const introP2 = document.getElementById("intro-p2");
 const introh3 = document.getElementById("intro-h3");
 const introh1 = document.getElementById("intro-h1");
+const testimoniesSection = document.querySelector(".testimonies-section");
+const nextButton = document.getElementById("nextButton");
+const prevButton = document.getElementById("prevButton");
+
+
 
 
 //Function to display the sidebar menu when the menu is clicked
@@ -81,7 +86,7 @@ try
 }
 catch(e){console.error(e);}
 
-
+//Apply html to all the products
 let productData = '';
 
 products.forEach((product) => 
@@ -106,8 +111,9 @@ products.forEach((product) =>
     </section>
     `
 });
-
+//Display all the products
 document.querySelector('.product-grid').innerHTML = productData;
+//Add styling to the cents
 document.querySelectorAll('.price').forEach((p) =>
 {
     let text = p.textContent;
@@ -115,6 +121,7 @@ document.querySelectorAll('.price').forEach((p) =>
     p.innerHTML = text.slice(0, -2) + '<span>' + text.slice(-2) + '</span>';
 });
 
+//Add html to all the testimonies
 let testimonyData = '';
 testimonials.forEach((testimony) =>{
     testimonyData += `
@@ -138,7 +145,78 @@ testimonials.forEach((testimony) =>{
         </div>
     ` 
 })
-
+//Display all the testimonies
 document.querySelector(".testimonies-section").innerHTML = testimonyData;
+
+let index = 0, start = 0;
+let isPaused = false;
+let cards = document.querySelectorAll(".card");
+let cardArray = Array.from(cards);
+
+let intervalID
+const showTestimonials = () =>
+{
+    const testimonialWidth = testimoniesSection.offsetWidth;
+    testimoniesSection.style.setProperty('--index', index);
+    testimoniesSection.style.setProperty('--testimonialWidth', testimonialWidth);
+    
+}
+const nextTestimonial = () =>
+{
+    if(!isPaused)
+    {   
+        index++;
+        console.log(index);
+        if(index>=cards.length)
+        {
+            index=0;
+        }
+        cardArray.push(cardArray[start]);
+        start++;
+        document.querySelector(".testimonies-section").appendChild(cardArray[cardArray.length-1]);
+        testimoniesSection.removeAttribute('style', 'animation-play-state: paused');
+        showTestimonials();
+    }
+    
+}
+const prevTestimonial = () =>
+{
+    if(!isPaused)
+    {
+        index--;
+        if(index<0)
+        {
+            index = cards.length-1;
+        }
+        console.log(index);
+        testimoniesSection.setAttribute('style', 'animation-play-state: paused');
+        showTestimonials();
+    }
+    
+}
+
+
+cards.forEach((card) =>{
+    card.addEventListener('mouseenter', () =>{
+        isPaused=true;
+        testimoniesSection.setAttribute('style', 'animation-play-state: paused');
+    })
+});
+
+
+
+cards.forEach((card) =>{
+    card.addEventListener('mouseleave', () =>{
+        isPaused=false;
+        testimoniesSection.removeAttribute('style', 'animation-play-state: paused')
+    })
+});
+
+intervalID = setInterval(() =>{nextTestimonial();}, 5000);
+showTestimonials();
+
+
+
+
 
 
