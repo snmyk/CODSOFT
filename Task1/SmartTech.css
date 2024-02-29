@@ -541,6 +541,10 @@ footer h3
 
 @media screen and (max-width: 1000px) 
 {
+    .header
+    {
+        width: 100vh;
+    }
     .product-name
     {
         font-size: 1.05rem;
@@ -613,11 +617,11 @@ footer h3
     }
     .about-section
     {
-        height: 550px;
+        height: 600px;
     }
     footer
     {
-        height: 950px;
+        height: 1010px;
     }
     .footer-section
     {
