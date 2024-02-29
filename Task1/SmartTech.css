@@ -6,7 +6,7 @@ body
 {
     background-color: hsla(0, 0%, 50%, 0.74);
 }
-.header
+.header, .footer-section
 {
     width: 100%;
     height: 50px;
@@ -204,7 +204,7 @@ nav
     width: 100%;
     height: 300px;
 }
-.about-section h3, .products h3, #testimonials-header
+.about-section h3, .products h3, #testimonials-header, footer h3
 {
     padding: 15px 40% 20px 40%;
     width: fit-content;
@@ -231,7 +231,7 @@ nav
 {
     background-color: hsla(0, 0%, 100%, 0.76);
 }
-.products h3, #testimonials-header
+.products h3, #testimonials-header, footer h3
 {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -387,7 +387,51 @@ span
     box-shadow: 3px 3px 2px -2px hsla(0, 0%, 0%, 0.87);
     
 }
-
+footer
+{
+    background-color: hsla(0, 0%, 0%, 0.555);
+    height: 400px;   
+}
+footer h3
+{
+    color: hsla(0, 0%, 100%, 0.74);
+}
+.footer-section
+{
+    width: 100%;
+    justify-content: center;
+}
+.orders, .In-store, .help, .contact, .socials
+{
+    margin: 5px 70px 50px 5px;
+}
+.footer-section section h4
+{
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+.footer-section section a, p, address
+{
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    color: hsl(0, 0%, 0%);
+    font-size: 1.05rem;
+    line-height: 1.8em;
+}
+.socials li
+{
+    margin-bottom: 15px;
+}
+.socials img
+{
+    width: 20px;
+    height: 20px;
+}
+.socials p
+{
+    display: inline;
+}
 
 
 
