@@ -40,7 +40,7 @@ export const products =
         imageUrl: 'images/Products/whiteRouter.jpeg',
         name: 'Reyee Dual Banf AC 1200 Mbps Fast Ethernet Mesh Router',
         description: "Get yourself this fast ethernet router featuring WiFi 5 with speeds upto 1167 Mbps."+
-        ' It can be usedd as a stand alone router or access point but can also be used in a mesh topology via ethernet or wirless with other Reyee wireless devices.',
+        ' It can be used as a stand alone router or access point but can also be used in a mesh topology via ethernet or wirless with other Reyee wireless devices.',
         price: 2913,
         
     },
