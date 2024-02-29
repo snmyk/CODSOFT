@@ -153,7 +153,7 @@ let isPaused = false;
 let cards = document.querySelectorAll(".card");
 let cardArray = Array.from(cards);
 
-let intervalID
+//Shows the testimonials in the viewport
 const showTestimonials = () =>
 {
     const testimonialWidth = testimoniesSection.offsetWidth;
@@ -161,6 +161,7 @@ const showTestimonials = () =>
     testimoniesSection.style.setProperty('--testimonialWidth', testimonialWidth);
     
 }
+//Scrolls to the next testimonial
 const nextTestimonial = () =>
 {
     if(!isPaused)
@@ -179,23 +180,9 @@ const nextTestimonial = () =>
     }
     
 }
-const prevTestimonial = () =>
-{
-    if(!isPaused)
-    {
-        index--;
-        if(index<0)
-        {
-            index = cards.length-1;
-        }
-        console.log(index);
-        testimoniesSection.setAttribute('style', 'animation-play-state: paused');
-        showTestimonials();
-    }
-    
-}
 
 
+//This will pause the automatic scroll of the testimonials when a user hovers over a testimonial
 cards.forEach((card) =>{
     card.addEventListener('mouseenter', () =>{
         isPaused=true;
@@ -204,18 +191,48 @@ cards.forEach((card) =>{
 });
 
 
-
+//Resume the automatic scroll once the user stop hovering over a testimonial
 cards.forEach((card) =>{
     card.addEventListener('mouseleave', () =>{
         isPaused=false;
         testimoniesSection.removeAttribute('style', 'animation-play-state: paused')
     })
 });
-
-intervalID = setInterval(() =>{nextTestimonial();}, 5000);
+//Automatically scroll to the next testimonial after 5 seconds
+setInterval(() =>{nextTestimonial();}, 5000);
+//Initialize the testimonials
 showTestimonials();
 
-
+/*  The following pieces of code will make the document 
+    scroll down to a particular section when the respective 
+    <a> tag is clicked
+*/
+let desiredSection;
+document.querySelector('a[href = "#home"]').addEventListener("click", (event) =>{
+    event.preventDefault(); //Prevent the link from opening a different page
+    desiredSection = document.getElementById('home');
+    desiredSection.scrollIntoView({behavior:"smooth"}); //Scroll into the respective section
+}) 
+document.querySelector('a[href = "#about"]').addEventListener("click", (event) =>{
+    event.preventDefault(); //Prevent the link from opening a different page
+    desiredSection = document.getElementById('about');
+    desiredSection.scrollIntoView({behavior:"smooth"}); //Scroll into the respective section
+})
+document.querySelector('a[href = "#products"]').addEventListener("click", (event) =>{
+    event.preventDefault(); //Prevent the link from opening a different page
+    desiredSection = document.getElementById('products');
+    desiredSection.scrollIntoView({behavior:"smooth"}); //Scroll into the respective section
+})
+document.querySelector('a[href = "#testimonials"]').addEventListener("click", (event) =>{
+    event.preventDefault(); //Prevent the link from opening a different page
+    desiredSection = document.getElementById('testimonials');
+    desiredSection.scrollIntoView({behavior:"smooth"}); //Scroll into the respective section
+})
+document.querySelector('a[href = "#contact"]').addEventListener("click", (event) =>{
+    event.preventDefault(); //Prevent the link from opening a different page
+    desiredSection = document.getElementById('contact');
+    desiredSection.scrollIntoView({behavior:"smooth"}); //Scroll into the respective section
+})
 
 
 

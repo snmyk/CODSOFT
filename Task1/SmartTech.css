@@ -390,7 +390,7 @@ span
 footer
 {
     background-color: hsla(0, 0%, 0%, 0.555);
-    height: 400px;   
+    height: 100vh;   
 }
 footer h3
 {
@@ -399,6 +399,7 @@ footer h3
 .footer-section
 {
     width: 100%;
+    display: flex;
     justify-content: center;
 }
 .orders, .In-store, .help, .contact, .socials
@@ -544,6 +545,10 @@ footer h3
     {
         font-size: 1.05rem;
     }
+    .product-section
+    {
+        height: 600px;
+    }
     .about-section
     {
         height: 450px;
@@ -552,6 +557,19 @@ footer h3
     {
         font-size: 5rem;
     } 
+    .footer-section
+    {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    footer
+    {
+        height: 800px;
+    }
+    .footer-section section
+    {
+        margin-left: 20px;
+    }
 }
 
 @media screen and (max-width: 700px) 
@@ -572,6 +590,19 @@ footer h3
     {
         font-size: 3rem;
     }  
+    footer
+    {
+        height: 900px;
+    }
+    .footer-section
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-section section
+    {
+        margin-left: 20px;
+    }
     
 }
 @media screen and (max-width: 550px)
@@ -583,5 +614,18 @@ footer h3
     .about-section
     {
         height: 550px;
+    }
+    footer
+    {
+        height: 950px;
+    }
+    .footer-section
+    {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-section section
+    {
+        margin-left: 20px;
     }
 } 
