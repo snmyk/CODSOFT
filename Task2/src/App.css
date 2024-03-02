@@ -1,37 +1,4 @@
-*
-{
-  margin: 0;
-  pad: 0;
-}
-body
-{
-    
-    background-color: hsla(0, 0%, 0%, 0.945);
-}
-nav
-{
-  background-color: rgb(53, 53, 53);
-}
-.default-menu li:first-child
-{
-  margin: auto;
-  margin-left: 10px;
-}
-.default-menu li
-{
-  list-style: none;
-  height: 56px;
-  width: fit-content;
-  display: flex;
-  align-items: center;
-}
-.default-menu a
-{
-  text-decoration: none;
-  font-size: 1.1rem;
-  color: whitesmoke;
-  padding: 0px 25px 0px 15px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-}
+
+
+
+

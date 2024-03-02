@@ -1,3 +1,108 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base
+{
+    *
+    {
+        margin: 0;
+        pad: 0;
+    }
+    body
+    {
+        background-color: hsla(0, 0%, 0%, 0.945);
+    }
+}
+@layer utilities
+{
+    li
+    {
+        cursor: pointer;
+        width: 100%;
+    }
+   
+}
+@layer components{
+    nav
+    {
+        background-color: transparent;
+        backdrop-filter: blur(15px);
+    }
+    .sidebar a:hover, .sidebar li:first-child:hover, .default-menu a:hover
+    {
+        font-size: 1.4rem;
+        transform: scale(1.02, 1.02);
+        background-color: hsla(0, 0%, 0%, 0.349);
+        border-radius: 4px;
+        box-shadow: 3px 3px 6px -2px hsla(0, 0%, 0%, 0.747);
+    }
+    .default-menu li:first-child
+    {
+        margin: auto;
+        margin-left: 10px;
+    }
+    .default-menu li, .sidebar li
+    {
+        list-style: none;
+        height: 56px;
+        width: fit-content;
+        display: flex;
+        align-items: center;
+    }
+    .default-menu a, .sidebar a
+    {
+        text-decoration: none;
+        font-size: 1.3rem;
+        font-family: 'font-roboto';
+        color: whitesmoke;
+        padding: 0px 25px 0px 15px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    .sidebar
+    {
+        background: linear-gradient(hsla(0, 0%, 96%, 0.027), grey);
+        backdrop-filter: blur(30px);
+        
+    }
+    .sidebar a, .sidebar li
+    {
+        width: 100%;
+    }
+    .hello
+    {
+        background: linear-gradient(to right, hwb(51 0% 0% / 0.979), hsl(0, 0%, 0%));
+        background-clip: text;
+        -webkit-background-clip: text ;
+        -webkit-text-fill-color: transparent;       
+    }
+    .intro-text
+    {
+        flex: 1.2;
+    }
+    .intro-text span
+    {
+        background: linear-gradient( hwb(51 0% 0%), hsla(0, 0%, 0%, 0));
+        background-clip: text;
+        -webkit-background-clip: text ;
+        -webkit-text-fill-color: transparent;
+    }
+    .intro-img
+    {
+        flex: 0.8;
+        overflow: hidden;
+        width: 100%;
+        left: 0;
+        height: 100%;
+    }
+    @media screen and (max-width: 800px) 
+    {
+        .default-menu a
+        {
+            display: none;
+            
+        } 
+    }
+}
