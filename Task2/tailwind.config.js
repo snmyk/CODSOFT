@@ -10,9 +10,9 @@ export default {
         twitterblue: '#1DA1F2',
       },
       fontFamily: {
-        roboto: 'Roboto',
-        codyStar: 'Codystar',
-        anta: 'Anta'
+        roboto: ['Roboto', 'sans-sarif'],
+        codyStar: ['Codystar', 'sans-sarif'],
+        anta: ['Anta', 'sans-sarif'],
       },
     },
   },

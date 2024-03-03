@@ -33,9 +33,11 @@
     {
         font-size: 1.4rem;
         transform: scale(1.02, 1.02);
-        background-color: hsla(0, 0%, 0%, 0.349);
         border-radius: 4px;
-        box-shadow: 3px 3px 6px -2px hsla(0, 0%, 0%, 0.747);
+        transition: 0.1s;
+        text-decoration: underline;
+        text-decoration-color: theme("colors.twitterblue");
+        text-decoration-thickness: 3px;
     }
     .default-menu li:first-child
     {
@@ -50,10 +52,15 @@
         display: flex;
         align-items: center;
     }
+    .default-menu img:nth-of-type(1)
+    {
+        border-radius: 20px;
+    }
     .default-menu a, .sidebar a
     {
         text-decoration: none;
         font-size: 1.3rem;
+        text-transform: uppercase;
         font-family: 'font-roboto';
         color: whitesmoke;
         padding: 0px 25px 0px 15px;
@@ -65,22 +72,28 @@
     {
         background: linear-gradient(hsla(0, 0%, 96%, 0.027), grey);
         backdrop-filter: blur(30px);
+        z-index: 999;
         
     }
     .sidebar a, .sidebar li
     {
         width: 100%;
+
     }
     .hello
     {
-        background: linear-gradient(to right, hwb(51 0% 0% / 0.979), hsl(0, 0%, 0%));
+        z-index: 10;
+        background: linear-gradient(hwb(51 0% 0% / 0.979), hsl(0, 0%, 0%));
         background-clip: text;
         -webkit-background-clip: text ;
-        -webkit-text-fill-color: transparent;       
+        -webkit-text-fill-color: transparent;  
+        animation: blinker 1s ease-in-out 0.2s 2 reverse none;     
     }
     .intro-text
     {
         flex: 1.2;
+        z-index: 10;  
+        margin-top: 5.5rem
     }
     .intro-text span
     {
@@ -89,14 +102,47 @@
         -webkit-background-clip: text ;
         -webkit-text-fill-color: transparent;
     }
-    .intro-img
+    .intro-text h3 span:nth-of-type(1)
+    {
+        animation: blinker 1.5s ease 0s infinite normal none;
+        font-weight: 800;
+    }
+    .intro-cv
     {
         flex: 0.8;
-        overflow: hidden;
-        width: 100%;
-        left: 0;
-        height: 100%;
     }
+    .intro-cv div a
+    {
+        margin-top: 20px;
+        text-align: center;
+        margin-right: 20px;
+        border-color: hsl(51, 100%, 50%);
+        border-radius: 4px;
+        opacity: 1;
+        transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,1,0,0,1);
+        transition: 1s 2s cubic-bezier(0.5, 0, 0, 0.5) 0.4s;
+        transform: 2s cubic-bezier(0.5, 0, 0.5, 1) 0.4s;
+        animation: bling 0.2s linear 0s infinite normal none;
+
+    }
+    @keyframes bling 
+    {
+        50%
+        {
+            border-color: theme("colors.twitterblue");
+            border-radius: 2px;
+            border-style: dashed;
+        }   
+        100%
+        {
+            border-color: hsl(51, 100%, 50%); 
+            border-radius: 4px;
+            border-style: dashed;
+        }
+    }
+
+    
+    
     @media screen and (max-width: 800px) 
     {
         .default-menu a
