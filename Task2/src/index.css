@@ -22,6 +22,7 @@
     {
         cursor: pointer;
         width: 100%;
+        list-style: none;
     }
     @media screen and (max-width: 800px) 
     {
@@ -80,11 +81,9 @@
     }
     .sidebar
     {
-        background: linear-gradient(to bottom,hsl(0, 0%, 7%), rgba(128, 128, 128, 0.082));
-        backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(20px);
-        
-        
+
+        background-color: rgba(0, 0, 0, 0.945);
+        backdrop-filter: blur(20px);   
     }
     .sidebar a, .sidebar li
     {
@@ -171,6 +170,37 @@
     .about-me-header
     {
         animation: blinker 1.5s ease 0s infinite normal none;
+    }
+    .skills-list p
+    {
+        color: white;
+        margin: 20px 50px 20px 20px;
+        width: fit-content;
+        font-family: theme('fontFamily.roboto');
+        letter-spacing: 1.8px;
+        padding: 10px;
+        border-width: 3px;
+        border-color: theme('colors.twitterblue');
+        border-style: dotted;
+        border-radius: 20px;
+    }
+    .skills-info div
+    {
+        flex: 0.9;
+    }
+    .skills-list
+    {
+        flex: 1.1;
+        height: 100%;
+        text-align: center;
+        padding: 10px;    
+    }
+    .skills-info div img
+    {
+        height: 300px;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+
     }
 
      

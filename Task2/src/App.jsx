@@ -91,7 +91,31 @@ function App() {
             </div>
           </div>
         </section>
-      </>   
+      </>  
+      <>
+        <section className='h-screen'>
+          <h3 className='about-me-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Skills</h3>
+          <div className='skills-info flex justify-center items-center mt-5'>
+            <div className='skills-list'>
+              <p className='inline'>Java</p>
+              <p className='inline'>Java Springboot</p>
+              <p>Python</p>
+              <p className='inline'>JavaScript</p>
+              <p className='inline'>React</p>
+              <p className='inline'>HTML</p>
+              <p className='inline'>CSS</p>
+              <p>Tailwind CSS</p>
+              <p className='inline'>Git/Gitlab</p>
+              <p className='inline'>MySQL</p>
+              <p>Web development</p>
+            </div>
+            <div className='flex justify-center items-center'>
+              <img src='public/Images/Icons/skills-image.png' alt='picture'/>
+            </div>
+
+          </div>
+        </section>
+      </> 
     </>   
   )
 }
