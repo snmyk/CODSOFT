@@ -8,6 +8,7 @@ export default {
     extend: {
       colors: {
         twitterblue: '#1DA1F2',
+        gold: '#ffd900fa',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-sarif'],

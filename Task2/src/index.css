@@ -93,7 +93,7 @@
     .hello
     {
         z-index: 10;
-        background: linear-gradient(hwb(51 0% 0% / 0.979), hsl(0, 0%, 0%));
+        background: linear-gradient(hsla(51, 100%, 50%, 0.98), hsl(0, 0%, 0%));
         background-clip: text;
         -webkit-background-clip: text ;
         -webkit-text-fill-color: transparent;  
@@ -120,22 +120,26 @@
     {
         flex: 0.8;
     }
-    .intro-cv div a
+    .intro-cv div a, .project-card a
     {
         margin-top: 20px;
         text-align: center;
         margin-right: 20px;
         border-color: hsl(51, 100%, 50%);
-        border-top-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-        border-top-right-radius: 5px;
-        border-bottom-left-radius: 5px ;
+        border-width: 3px;
+        border-radius: 30px;
         opacity: 1;
         transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,1,0,0,1);
         transition: 1s 2s cubic-bezier(0.5, 0, 0, 0.5) 0.4s;
         transform: 2s cubic-bezier(0.5, 0, 0.5, 1) 0.4s;
-        animation: bling 0.2s linear 0s infinite normal none;
+        animation: bling 0.2s linear 0s infinite normal forwards;
 
+    }
+    .intro-cv div a:hover, .project-card a:hover
+    {
+        transform: scale(1.05, 1.05);
+        animation-play-state: paused;
+        
     }
     
     .down-icon-img
@@ -201,6 +205,40 @@
         border-top-left-radius: 100px;
         border-bottom-right-radius: 100px;
 
+    }
+
+    .project-card
+    {
+        width: 600px;
+        margin: 0px 20px 20px 20px;
+    }
+    #alphabet-book
+    {
+        height: 500px;
+    }
+    #incredible-movies, #mytutor, #client-server, #smart-tech
+    {
+        height: 400px;
+    }
+    #client-server-hidden
+    {
+        animation: left-reveal 1s ease-out 0s 1 normal none;
+    }
+    #mytutor-hidden
+    {
+        animation: spin-reveal 1s ease-out 0s 1 normal forwards;
+    }
+    #incredible-movies-hidden
+    {
+        animation: top-reveal 1s ease-out 0s 1 normal forwards;
+    }
+    #smart-tech-hidden
+    {
+        animation: right-reveal 1s ease-out 0s 1 normal none;
+    }
+    #alphabet-book-hidden
+    {
+        animation: bottom-reveal 1s ease-out 0s 1 normal none;
     }
 
      

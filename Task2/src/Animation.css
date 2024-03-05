@@ -31,20 +31,74 @@
             border-color: theme("colors.twitterblue");
             border-radius: 2px;
             border-style: dashed;
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px ;
+            border-radius: 30px;
         }   
         100%
         {
             border-color: hsl(51, 100%, 50%); 
             border-radius: 4px;
             border-style: dashed;
-            border-top-left-radius: 20px;
-            border-bottom-right-radius: 20px;
-            border-top-right-radius: 5px;
-            border-bottom-left-radius: 5px ;
+            border-radius: 30px ;
         }
+    }
+    @keyframes left-reveal 
+    {
+        0%
+        {
+            transform: translateX(-100%) rotateY(90deg);
+        }
+        100%
+        {
+            transform: translateX(0) rotateY(0);
+        }
+        
+    }
+    @keyframes right-reveal 
+    {
+        0%
+        {
+            transform: translateX(100%) rotateY(90deg);
+        }
+        100%
+        {
+            transform: translateX(0) rotateY(0);
+        }
+        
     } 
+    @keyframes spin-reveal 
+    {
+        0%
+        {
+            transform: translateX(0) rotateY(180deg);
+        }
+        100%
+        {
+            transform: translateX(0) rotateY(0);
+        }
+        
+    }
+    @keyframes top-reveal 
+    {
+        0%
+        {
+            transform: translateY(-100%) rotateX(90deg);
+        }
+        100%
+        {
+            transform: translateY(0) rotateX(0);
+        }
+        
+    }
+    @keyframes bottom-reveal 
+    {
+        0%
+        {
+            transform: translateY(100%) rotateX(90deg);
+        }
+        100%
+        {
+            transform: translateY(0) rotateX(0);
+        }
+        
+    }
 }

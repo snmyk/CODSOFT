@@ -1,6 +1,8 @@
 import './index.css'
 import './Animation.css'
-import { displaySidebar, hideSidebar } from '../Portfolio'
+import { displaySidebar, hideSidebar } from './Portfolio'
+import { projects } from './Projects'
+import { ProjectDisplayCard, ProjectHiddenCard } from './ProjectCard'
 
 
 
@@ -35,7 +37,7 @@ function App() {
       <>
         <section className='h-screen relative mt-14 '>
           <div className=' mt-3.5 text-center text-7xl  w-full tracking-wide'>
-            <h2 className='hello font-codyStar text-9xl text-center font-extrabold h-full' >HELLO</h2>
+            <h2 className='hello font-codyStar  text-9xl text-center font-extrabold h-full' >HELLO</h2>
           </div>
 
           <div className='flex justify-center items-center  w-full tracking-wide'>
@@ -47,11 +49,11 @@ function App() {
               <p className='font-roboto text-white text-3xl pl-2.5 text-center'>Get My Resume!</p>
               <div className='flex items-center justify-center'>
                 <a target='blank' href='https://drive.google.com/file/d/191h8fDiL-wLJYV6clZoXAL7PkpVHkqlv/view?usp=drive_link'
-                  className='border-2 text-white border-dashed h-8 m-2 w-32'>
+                  className=' text-white border-dashed h-8 m-2 w-32'>
                   Get .pdf
                 </a>
                 <a target='blank' href='https://docs.google.com/document/d/1DrJy960M3a06ynG8WX-rkV7x__Oci12P/edit?usp=drive_link&ouid=108224675991313654284&rtpof=true&sd=true'
-                className='border-2 text-white border-dashed h-8 m-2 w-32'> 
+                className=' text-white border-dashed h-8 m-2 w-32'> 
                   Get .docx
                 </a>
                 
@@ -114,6 +116,19 @@ function App() {
             </div>
 
           </div>
+        </section>
+      </>
+      <>
+        <section className='h-screen'>
+          <h3 className='about-me-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Projects</h3>
+          <div className='flex justify-center items-center flex-wrap'>
+            {
+              projects.map((project)=>{
+                return <ProjectDisplayCard project = {project}/>
+              })
+            }
+          </div>
+          
         </section>
       </> 
     </>   
