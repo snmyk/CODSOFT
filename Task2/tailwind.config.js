@@ -9,6 +9,7 @@ export default {
       colors: {
         twitterblue: '#1DA1F2',
         gold: '#ffd900fa',
+        whatsappgreen: '#128C7E',
       },
       fontFamily: {
         roboto: ['Roboto', 'sans-sarif'],

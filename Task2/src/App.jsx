@@ -15,27 +15,27 @@ function App() {
             <nav className='w-full h-14 top-0 flex justify-end items-center fixed z-10'>
               <ul className='default-menu w-full h-14 flex justify-end items-center'>
                 <li><img className='h-14 p-1' src='public/images/logo.png'/><p className='inline text-white text-2xl'>Sphiwe Nyoni</p></li>
-                <li><a href='home'>home</a></li>
-                <li><a href='about'>About</a></li>
-                <li><a href='skills'>Skills</a></li>
-                <li><a href='projects'>Projects</a></li>
-                <li><a href='contact'>Contact</a></li>
+                <li><a href='#home'>home</a></li>
+                <li><a href='#about'>About</a></li>
+                <li><a href='#skills'>Skills</a></li>
+                <li><a href='#projects'>Projects</a></li>
+                <li><a href='#contact'>Contact</a></li>
                 <li id="menu-icon" onClick={displaySidebar}><img className='h-10 pr-2.5 pl-2.5' src='public/images/Icons/menu.svg'/></li>
               </ul>
               
               <ul id='sidebar' className='sidebar h-screen w-40 fixed flex justify-start items-start flex-col -top-0 -right-0 z-50' style ={{display:'none'}}>
                 <li id="close-icon" onClick={hideSidebar}><img className='h-10 pr-2.5 pl-2.5' src='public/images/Icons/close.svg'/></li>
-                <li><a href='home'>home</a></li>
-                <li><a href='about'>About</a></li>
-                <li><a href='skills'>Skills</a></li>
-                <li><a href='projects'>Projects</a></li>
-                <li><a href='contact'>Contact</a></li>
+                <li><a href='#home'>home</a></li>
+                <li><a href='#about'>About</a></li>
+                <li><a href='#skills'>Skills</a></li>
+                <li><a href='#projects'>Projects</a></li>
+                <li><a href='#contact'>Contact</a></li>
               </ul>
             </nav>
         </header> 
       </>
       <>
-        <section className='h-screen relative mt-14 '>
+        <section id='home' className='h-full relative mt-14 '>
           <div className=' mt-3.5 text-center text-7xl  w-full tracking-wide'>
             <h2 className='hello font-codyStar  text-9xl text-center font-extrabold h-full' >HELLO</h2>
           </div>
@@ -62,7 +62,7 @@ function App() {
           </div>
           
           <div className='down-icon  cursor-pointer mt-2.5 h-28 flex justify-center items-center'>
-            <a href='about' className='h-full'>
+            <a href='#about' className='h-full'>
               <img className='down-icon-img h-full' src='public/Images/Icons/caret-down-fill.svg' alt='go down'/>
             </a>
             
@@ -71,7 +71,7 @@ function App() {
         </section>
       </>  
       <>
-        <section className='h-screen'>
+        <section id='about' className='h-full'>
           <h3 className='about-me-header font-codyStar text-4xl  text-center text-red-500 tracking-widetracking-wide tracking-wide mb-20'>ABOUT ME</h3>
           <div className='about-info flex justify-center items-center mt-5'>
             <div>
@@ -95,8 +95,8 @@ function App() {
         </section>
       </>  
       <>
-        <section className='h-screen'>
-          <h3 className='about-me-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Skills</h3>
+        <section id='skills' className='h-full'>
+          <h3 className='skills-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Skills</h3>
           <div className='skills-info flex justify-center items-center mt-5'>
             <div className='skills-list'>
               <p className='inline'>Java</p>
@@ -119,8 +119,8 @@ function App() {
         </section>
       </>
       <>
-        <section className='h-screen'>
-          <h3 className='about-me-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Projects</h3>
+        <section id='projects' className='h-full'>
+          <h3 className='projects-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Projects</h3>
           <div className='flex justify-center items-center flex-wrap'>
             {
               projects.map((project)=>{
@@ -131,6 +131,34 @@ function App() {
           
         </section>
       </> 
+      <>
+        <footer id='contact' className='h-screen'>
+          <h3 className='contact-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>reach out</h3>
+          <div className='text-white leading-relaxed font-roboto text-2xl tracking-wider text-center flex flex-wrap p-2.5'>
+            <p className='mb-10'>I am enthusiastic about launching my career at a company that prioritizes <span>growth</span> and <span>learning</span>.  
+              I thrive in environments that value teamwork and collaboration, while also recognizing the importance of individual brilliance. 
+            </p>
+            <p className='mb-10'>
+              I a currently seeking a <span>junior/part-time</span> opportunity where I can apply my skills and further enhance them through hands-on experience. 
+              If your compnay is in need of a <span>software engineer/developer</span>, I would love to discuss how I can contribute to your team.
+            </p>
+          </div>
+          <ul className='contact-list flex justify-center items-center flex-wrap w-fit mt-20 '>
+            <li><a target='blank' href='https://wa.me/qr/DQZTXNFTMPUHK1'><img src='public/Images/Icons/whatsapp.svg' alt='whatsapp'/></a></li>
+            <li><a target='blank' href='https://www.linkedin.com/in/sphiwe-nyoni-075692168/'><img src='public/Images/Icons/linkedin.svg' alt='linkedin'/></a></li>
+            <li><a target='blank' href='https://www.instagram.com/sphiwe_nyoni/?igsh=dmoxc3J6djAzdXI0'><img src='public/Images/Icons/instagram.svg' alt='instagram'/></a></li>
+            <li><a target='blank' href='https://www.facebook.com/sphiwe.nyoni.73/'><img src='public/Images/Icons/facebook.svg' alt='facebook'/></a></li>
+            <li><a target='blank' href='https://github.com/snmyk'><img src='public/Images/Icons/github.svg' alt='github'/></a></li>
+            <li><a target='blank' href='mailto:michaelnyoni16@gmail.com'><img src='public/Images/Icons/envelope-at.svg' alt='email'/></a></li>
+          </ul>
+          <p className='text-white flex items-center justify-center flex-wrap font-roboto mt-8'>082 615 6668 / 078 106 3809 / 067 268 0384</p>
+          <div className='flex justify-center items-center flex-wrap mt-8'>
+            <img className='inline mr-5 w-8' src='public/Images/Icons/c-circle.svg' alt='copyright'/>
+            <p className='text-white font-anta inline text-lg tracking-wider'>2024 Sphiwe Nyoni</p>
+          </div>
+          
+        </footer>
+      </>
     </>   
   )
 }

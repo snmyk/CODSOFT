@@ -135,7 +135,7 @@
         animation: bling 0.2s linear 0s infinite normal forwards;
 
     }
-    .intro-cv div a:hover, .project-card a:hover
+    .intro-cv div a:hover, .project-card a:hover, .contact-list li:hover
     {
         transform: scale(1.05, 1.05);
         animation-play-state: paused;
@@ -150,6 +150,10 @@
         -webkit-animation: jump 2s linear infinite normal;
     }
 
+    section, footer
+    {
+        margin: 80px 0px 150px 0px;
+    }
     .about-info div:nth-of-type(1)
     {
         flex: 0.9;
@@ -167,11 +171,11 @@
     {
         word-spacing: 5px;
     }
-    .about-info div:nth-of-type(2) p span
+    .about-info div:nth-of-type(2) p span, footer span
     {
         color: theme('colors.twitterblue');
     }
-    .about-me-header
+    .about-me-header, .skills-header, .projects-header, .contact-header
     {
         animation: blinker 1.5s ease 0s infinite normal none;
     }
@@ -239,6 +243,41 @@
     #alphabet-book-hidden
     {
         animation: bottom-reveal 1s ease-out 0s 1 normal none;
+    }
+
+    .contact-list
+    {
+        margin: auto;
+    }
+    .contact-list li
+    {
+        list-style: none;
+        margin-right: 20px;
+        height: 40px;
+        width: 70px;
+        border-width: 3px;
+        border-style: dotted;
+        border-color: hsl(51, 100%, 50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        border-radius: 30px;
+        transform: matrix3d(1,0,0,0,0,1,0,0,0,0,1,0,1,0,0,1);
+        transition: 1s 2s cubic-bezier(0.5, 0, 0, 0.5) 0.4s;
+        transform: 2s cubic-bezier(0.5, 0, 0.5, 1) 0.4s;
+        animation: bling 0.2s linear 0s infinite normal forwards;
+    }
+    .contact-list li a
+    {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+    }
+    .contact-list img
+    {
+        height: 70%;
     }
 
      
