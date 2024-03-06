@@ -1,3 +1,4 @@
+//Return array of all my projectss
 export const projects =[
     {
         imageUrl: 'public/Images/Projects/movie-app.png',

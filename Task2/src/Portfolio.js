@@ -1,12 +1,12 @@
 let sidebar;
-
+//Get id of sidebar once DOM has loaded
 document.addEventListener('DOMContentLoaded', () =>{
     setTimeout(() =>{
         sidebar = document.getElementById('sidebar');
         
     }, 1000)   
 });
-
+//Display sidebar when menu is clicked
 export const displaySidebar = () =>
 {
     if(sidebar)
@@ -15,6 +15,7 @@ export const displaySidebar = () =>
     }
     
 }
+//Hide the sidebar when the close menu icon is clicked
 export const hideSidebar = () =>
 {
     if(sidebar)
@@ -23,16 +24,5 @@ export const hideSidebar = () =>
     }
   
 }
-const scroll = ScrollReveal({
-    duration: 1500,
-    delay: 0,
-    distance: '100px',
-    origin: 'top',
-    easing: 'ease',
-    reset: true, 
-});
-scroll.reveal(".about", {delay: 300})
-scroll.reveal(".skills", {delay: 300})
-scroll.reveal(".projects", {delay: 300})
-scroll.reveal(".contact", {delay: 300})
+
 

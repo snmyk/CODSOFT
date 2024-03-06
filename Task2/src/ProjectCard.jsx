@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
+//Display the pictures of my projects
 export const ProjectDisplayCard = (props) =>
 {
     const {project} = props;
@@ -8,10 +9,11 @@ export const ProjectDisplayCard = (props) =>
     return(
         <div className="project-card flex-wrap relative" onMouseEnter={()=> setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
             <img id={project.id} className="w-full" src={project.imageUrl} alt={project.name} style={{opacity: isHovered ? 0:1, transition:'opacity 0.5s ease'}}/>
-            {isHovered && <ProjectHiddenCard project = {project}/>}
+            {isHovered && <ProjectHiddenCard project = {project}/>} 
         </div>
     ) 
 }
+//Display info about the project
 export const ProjectHiddenCard = (props) =>
 {
     const {project} = props;
