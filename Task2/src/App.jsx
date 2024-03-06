@@ -18,13 +18,13 @@ function App()
         <header>
             <nav className='w-full h-14 top-0 flex justify-end items-center fixed z-10'>
               <ul className='default-menu w-full h-14 flex justify-end items-center'>
-                <li><img className='h-14 p-1' src='/Images/logo.png'/><p className='inline text-white text-2xl'>Sphiwe Nyoni</p></li>
+                <li><img className='h-14 p-1' src='/Images/logo.png' alt='sphiwe'/><p className='inline text-white text-2xl'>Sphiwe Nyoni</p></li>
                 <li><a href='#home'>home</a></li>
                 <li><a href='#about'>About</a></li>
                 <li><a href='#skills'>Skills</a></li>
                 <li><a href='#projects'>Projects</a></li>
                 <li><a href='#contact'>Contact</a></li>
-                <li id="menu-icon" onClick={displaySidebar}><img className='h-10 pr-2.5 pl-2.5' src='/Images/Icons/menu.svg'/></li>
+                <li id="menu-icon" onClick={displaySidebar}><img className='h-10 pr-2.5 pl-2.5' src='/Images/Icons/menu.svg' alt='menu'/></li>
               </ul>
               
               <ul id='sidebar' className='sidebar h-screen fixed flex justify-start items-start flex-col -top-0 -right-0 z-50' style ={{display:'none'}}>
