@@ -143,7 +143,7 @@ function App()
               I thrive in environments that value teamwork and collaboration, while also recognizing the importance of individual brilliance. 
             </p>
             <p className='mb-10'>
-              I a currently seeking a <span>junior/part-time</span> opportunity where I can apply my skills and further enhance them through hands-on experience. 
+              I am currently seeking a <span>junior/part-time</span> opportunity where I can apply my skills and further enhance them through hands-on experience. 
               If your compnay is in need of a <span>software engineer/developer</span>, I would love to discuss how I can contribute to your team.
             </p>
           </div>
