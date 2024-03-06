@@ -7,7 +7,7 @@
     *
     {
         margin: 0;
-        pad: 0;
+        padding: 0;
         scroll-behavior: smooth;
     }
     body
@@ -18,23 +18,185 @@
 }
 @layer utilities
 {
+    
     li
     {
         cursor: pointer;
         width: 100%;
         list-style: none;
     }
+    
     @media screen and (max-width: 800px) 
     {
         .default-menu a
         {
             display: none;    
         } 
+        .sidebar
+        {
+            width: 28%;
+        }
+        .hello
+        {
+            font-size: 35px;
+            overflow: hidden;
+        }
+        .home div:nth-of-type(1)
+        {
+            margin-top: 90px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .intro-text h3, .intro-text p
+        {
+            overflow: hidden;
+            padding: 15px;
+            font-size: 1.5rem;
+        }
+        .home div:nth-of-type(2)
+        {
+            overflow: hidden;
+            width: 100%;
+            display: flex;                      
+            flex-direction: column;
+            margin-top: 40px;            
+        }
+        .intro-text
+        {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;  
+        }
+        .skills img
+        {
+            display: none;
+        }
+        .skills
+        {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100%;
+            margin-bottom: 50px;
+        }
+        .skills p
+        {
+            display: block;
+        }
+        .skills p
+        {
+            width: 100%;
+        }
+        .about-info
+        {
+            display: block;
+        }
+        .about-info p
+        {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .about-info h3
+        {
+            text-align: center;
+            padding-top: 10px;
+        }
+        .about-info img
+        {
+            height: 150px;
+        }
+        .about-me-header
+        {
+            margin-bottom: 50px;
+        }
+        .projects div
+        {
+            flex-direction: column;
+            flex: 1;
+        }
+        .project-card
+        {
+            width: 95%;
+        }
+        .hidden-card
+        {
+            flex-direction: column;
+            height: fit-content;
+        }
+        .hidden-card div:nth-of-type(2)
+        {
+            flex-direction: row;
+        }
     }
+    @media screen and (max-width: 1000px) 
+    {
+        .intro-text
+        {
+            display: flex;
+            flex-direction: column;
+            padding-left: 15px;
+            padding-right: 15px
+        }
+        .home div:nth-of-type(2)
+        {
+            display: flex;
+            flex-direction: column;
+        }
+        .intro-cv
+        {
+            margin-top: 30px;
+        }
+        .about-info
+        {
+            flex-direction: column;
+        }
+        .about-info h3
+        {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .about-info p
+        {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .hidden-card
+        {
+            width: 100%;
+        }
+        .sidebar
+        {
+            width: 20%;
+        }
+        
+    }
+    @media screen and (max-width:950px) 
+    {
+        .default-menu a
+        {
+            display: none;
+        }
+        
+    }
+    @media screen and (min-width: 1000px) 
+    {
+        .hidden-card
+        {
+            width: 100%;
+        }
+        .sidebar
+        {
+            width: 15%;
+        }
+        
+    }
+    
    
 }
 @layer components{
-    nav
+    .default-menu, .sidebar
     {
         background-color: hsla(0, 0%, 0%, 0.5);
         backdrop-filter: blur(20px);
@@ -50,6 +212,7 @@
         text-decoration-color: theme("colors.twitterblue");
         text-decoration-thickness: 3px;
     }
+    
     .default-menu li:first-child
     {
         margin: auto;
@@ -81,14 +244,12 @@
     }
     .sidebar
     {
-
-        background-color: rgba(0, 0, 0, 0.945);
-        backdrop-filter: blur(20px);   
+        background-color: hsla(0, 0%, 0%, 0.5);;
+        width: 12%;  
     }
     .sidebar a, .sidebar li
     {
         width: 100%;
-
     }
     .hello
     {
@@ -213,9 +374,10 @@
 
     .project-card
     {
-        width: 600px;
+        width: 40%;
         margin: 0px 20px 20px 20px;
     }
+    
     #alphabet-book
     {
         height: 500px;

@@ -60,6 +60,3 @@ export const projects =[
         demo: 'N/A'
     }
 ]
-projects.map((project)=>{
-    console.log(typeof techStack)
-})

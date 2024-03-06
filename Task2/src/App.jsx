@@ -1,13 +1,17 @@
 import './index.css'
 import './Animation.css'
+import './Reveal'
 import { displaySidebar, hideSidebar } from './Portfolio'
 import { projects } from './Projects'
-import { ProjectDisplayCard, ProjectHiddenCard } from './ProjectCard'
+import { ProjectDisplayCard } from './ProjectCard'
+import React from 'react'
 
 
 
 
-function App() {
+
+function App() 
+{
   return (
     <>
       <>
@@ -23,7 +27,7 @@ function App() {
                 <li id="menu-icon" onClick={displaySidebar}><img className='h-10 pr-2.5 pl-2.5' src='public/images/Icons/menu.svg'/></li>
               </ul>
               
-              <ul id='sidebar' className='sidebar h-screen w-40 fixed flex justify-start items-start flex-col -top-0 -right-0 z-50' style ={{display:'none'}}>
+              <ul id='sidebar' className='sidebar h-screen fixed flex justify-start items-start flex-col -top-0 -right-0 z-50' style ={{display:'none'}}>
                 <li id="close-icon" onClick={hideSidebar}><img className='h-10 pr-2.5 pl-2.5' src='public/images/Icons/close.svg'/></li>
                 <li><a href='#home'>home</a></li>
                 <li><a href='#about'>About</a></li>
@@ -35,9 +39,9 @@ function App() {
         </header> 
       </>
       <>
-        <section id='home' className='h-full relative mt-14 '>
-          <div className=' mt-3.5 text-center text-7xl  w-full tracking-wide'>
-            <h2 className='hello font-codyStar  text-9xl text-center font-extrabold h-full' >HELLO</h2>
+        <section id='home' className='home h-full w-full relative mt-14 '>
+          <div className='mt-20 h-fit text-center text-7xl  w-full tracking-wide'>
+            <h2 className='hello font-codyStar  text-9xl text-center font-extrabold h-fit' >HELLO</h2>
           </div>
 
           <div className='flex justify-center items-center  w-full tracking-wide'>
@@ -71,9 +75,9 @@ function App() {
         </section>
       </>  
       <>
-        <section id='about' className='h-full'>
-          <h3 className='about-me-header font-codyStar text-4xl  text-center text-red-500 tracking-widetracking-wide tracking-wide mb-20'>ABOUT ME</h3>
-          <div className='about-info flex justify-center items-center mt-5'>
+        <section id='about' className='about h-full'>
+          <h3 className='about-me-header font-codyStar text-4xl  text-center text-gold tracking-widetracking-wide tracking-wide mb-20'>ABOUT ME</h3>
+          <div className='about-info flex justify-center items-center flex-wrap mt-5'>
             <div>
               <img src='public/Images/Icons/sphiwe.png' alt='me'/>
             </div>
@@ -95,8 +99,8 @@ function App() {
         </section>
       </>  
       <>
-        <section id='skills' className='h-full'>
-          <h3 className='skills-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Skills</h3>
+        <section id='skills' className='skills h-full w-full'>
+          <h3 className='skills-header font-codyStar text-4xl  text-center text-gold tracking-widetracking-wide tracking-wide mb-20'>My Skills</h3>
           <div className='skills-info flex justify-center items-center mt-5'>
             <div className='skills-list'>
               <p className='inline'>Java</p>
@@ -119,8 +123,8 @@ function App() {
         </section>
       </>
       <>
-        <section id='projects' className='h-full'>
-          <h3 className='projects-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>My Projects</h3>
+        <section id='projects' className='projects h-full w-full'>
+          <h3 className='projects-header font-codyStar text-4xl  text-center text-gold tracking-widetracking-wide tracking-wide mb-20'>My Projects</h3>
           <div className='flex justify-center items-center flex-wrap'>
             {
               projects.map((project)=>{
@@ -132,8 +136,8 @@ function App() {
         </section>
       </> 
       <>
-        <footer id='contact' className='h-screen'>
-          <h3 className='contact-header font-codyStar text-4xl  text-center text-red-600 tracking-widetracking-wide tracking-wide mb-20'>reach out</h3>
+        <footer id='contact' className='contact h-screen'>
+          <h3 className='contact-header font-codyStar text-4xl  text-center text-gold tracking-widetracking-wide tracking-wide mb-20'>reach out</h3>
           <div className='text-white leading-relaxed font-roboto text-2xl tracking-wider text-center flex flex-wrap p-2.5'>
             <p className='mb-10'>I am enthusiastic about launching my career at a company that prioritizes <span>growth</span> and <span>learning</span>.  
               I thrive in environments that value teamwork and collaboration, while also recognizing the importance of individual brilliance. 
