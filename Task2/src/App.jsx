@@ -18,17 +18,17 @@ function App()
         <header>
             <nav className='w-full h-14 top-0 flex justify-end items-center fixed z-10'>
               <ul className='default-menu w-full h-14 flex justify-end items-center'>
-                <li><img className='h-14 p-1' src='public/images/logo.png'/><p className='inline text-white text-2xl'>Sphiwe Nyoni</p></li>
+                <li><img className='h-14 p-1' src='/Images/logo.png'/><p className='inline text-white text-2xl'>Sphiwe Nyoni</p></li>
                 <li><a href='#home'>home</a></li>
                 <li><a href='#about'>About</a></li>
                 <li><a href='#skills'>Skills</a></li>
                 <li><a href='#projects'>Projects</a></li>
                 <li><a href='#contact'>Contact</a></li>
-                <li id="menu-icon" onClick={displaySidebar}><img className='h-10 pr-2.5 pl-2.5' src='public/images/Icons/menu.svg'/></li>
+                <li id="menu-icon" onClick={displaySidebar}><img className='h-10 pr-2.5 pl-2.5' src='/Images/Icons/menu.svg'/></li>
               </ul>
               
               <ul id='sidebar' className='sidebar h-screen fixed flex justify-start items-start flex-col -top-0 -right-0 z-50' style ={{display:'none'}}>
-                <li id="close-icon" onClick={hideSidebar}><img className='h-10 pr-2.5 pl-2.5' src='public/images/Icons/close.svg'/></li>
+                <li id="close-icon" onClick={hideSidebar}><img className='h-10 pr-2.5 pl-2.5' src='/Images/Icons/close.svg'/></li>
                 <li><a href='#home'>home</a></li>
                 <li><a href='#about'>About</a></li>
                 <li><a href='#skills'>Skills</a></li>
@@ -67,7 +67,7 @@ function App()
           
           <div className='down-icon  cursor-pointer mt-2.5 h-28 flex justify-center items-center'>
             <a href='#about' className='h-full'>
-              <img className='down-icon-img h-full' src='public/Images/Icons/caret-down-fill.svg' alt='go down'/>
+              <img className='down-icon-img h-full' src='/Images/Icons/caret-down-fill.svg' alt='go down'/>
             </a>
             
           </div>
@@ -79,7 +79,7 @@ function App()
           <h3 className='about-me-header font-codyStar text-4xl  text-center text-gold tracking-widetracking-wide tracking-wide mb-20'>ABOUT ME</h3>
           <div className='about-info flex justify-center items-center flex-wrap mt-5'>
             <div>
-              <img src='public/Images/Icons/sphiwe.png' alt='me'/>
+              <img src='/Images/Icons/sphiwe.png' alt='me'/>
             </div>
             <div>
               <h3 className=' mb-8 px-2.5 text-3xl font-anta text-green-600'>Sphiwe Nyoni</h3>
@@ -116,7 +116,7 @@ function App()
               <p>Web development</p>
             </div>
             <div className='flex justify-center items-center'>
-              <img src='public/Images/Icons/skills-image.png' alt='picture'/>
+              <img src='/Images/Icons/skills-image.png' alt='picture'/>
             </div>
 
           </div>
@@ -148,16 +148,16 @@ function App()
             </p>
           </div>
           <ul className='contact-list flex justify-center items-center flex-wrap w-fit mt-20 '>
-            <li><a target='blank' href='https://wa.me/qr/DQZTXNFTMPUHK1'><img src='public/Images/Icons/whatsapp.svg' alt='whatsapp'/></a></li>
-            <li><a target='blank' href='https://www.linkedin.com/in/sphiwe-nyoni-075692168/'><img src='public/Images/Icons/linkedin.svg' alt='linkedin'/></a></li>
-            <li><a target='blank' href='https://www.instagram.com/sphiwe_nyoni/?igsh=dmoxc3J6djAzdXI0'><img src='public/Images/Icons/instagram.svg' alt='instagram'/></a></li>
-            <li><a target='blank' href='https://www.facebook.com/sphiwe.nyoni.73/'><img src='public/Images/Icons/facebook.svg' alt='facebook'/></a></li>
-            <li><a target='blank' href='https://github.com/snmyk'><img src='public/Images/Icons/github.svg' alt='github'/></a></li>
-            <li><a target='blank' href='mailto:michaelnyoni16@gmail.com'><img src='public/Images/Icons/envelope-at.svg' alt='email'/></a></li>
+            <li><a target='blank' href='https://wa.me/qr/DQZTXNFTMPUHK1'><img src='/Images/Icons/whatsapp.svg' alt='whatsapp'/></a></li>
+            <li><a target='blank' href='https://www.linkedin.com/in/sphiwe-nyoni-075692168/'><img src='/Images/Icons/linkedin.svg' alt='linkedin'/></a></li>
+            <li><a target='blank' href='https://www.instagram.com/sphiwe_nyoni/?igsh=dmoxc3J6djAzdXI0'><img src='/Images/Icons/instagram.svg' alt='instagram'/></a></li>
+            <li><a target='blank' href='https://www.facebook.com/sphiwe.nyoni.73/'><img src='/Images/Icons/facebook.svg' alt='facebook'/></a></li>
+            <li><a target='blank' href='https://github.com/snmyk'><img src='/Images/Icons/github.svg' alt='github'/></a></li>
+            <li><a target='blank' href='mailto:michaelnyoni16@gmail.com'><img src='/Images/Icons/envelope-at.svg' alt='email'/></a></li>
           </ul>
           <p className='text-white flex items-center justify-center flex-wrap font-roboto mt-8'>082 615 6668 / 078 106 3809 / 067 268 0384</p>
           <div className='flex justify-center items-center flex-wrap mt-8'>
-            <img className='inline mr-5 w-8' src='public/Images/Icons/c-circle.svg' alt='copyright'/>
+            <img className='inline mr-5 w-8' src='/Images/Icons/c-circle.svg' alt='copyright'/>
             <p className='text-white font-anta inline text-lg tracking-wider'>2024 Sphiwe Nyoni</p>
           </div>
           

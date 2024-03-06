@@ -5,7 +5,7 @@ const scroll = ScrollReveal({
     distance: '100px',
     origin: 'top',
     easing: 'ease-in',
-    reset: true,
+    reset: 'true',
 });
 scroll.reveal(".about", {delay: 300})
 scroll.reveal(".skills", {delay: 300})

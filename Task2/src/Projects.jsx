@@ -1,7 +1,7 @@
 //Return array of all my projectss
 export const projects =[
     {
-        imageUrl: 'public/Images/Projects/movie-app.png',
+        imageUrl: '/Images/Projects/movie-app.png',
         id: 'incredible-movies',
         name: 'Incredible Movies: Movie-search App',
         techStack: [
@@ -13,7 +13,7 @@ export const projects =[
         demo: 'https://incredibe-movies.netlify.app/'
     },
     {
-        imageUrl: 'public/Images/Projects/smart-tech.png',
+        imageUrl: '/Images/Projects/smart-tech.png',
         id: 'smart-tech',
         name: 'Smart Tech: Landing page',
         techStack: [
@@ -25,7 +25,7 @@ export const projects =[
         demo: 'https://smarttech6.netlify.app/'
     },
     {
-        imageUrl: 'public/Images/Projects/mytutor.png',
+        imageUrl: '/Images/Projects/mytutor.png',
         id: 'mytutor',
         name: 'MyTutorApp: Tutor Management System',
         techStack: [
@@ -41,7 +41,7 @@ export const projects =[
         demo: 'N/A'
     },
     {
-        imageUrl: 'public/Images/Projects/Alphabet Book.jpg',
+        imageUrl: '/Images/Projects/Alphabet Book.jpg',
         id: 'alphabet-book',
         name: 'Android App: Alphabet Book',
         techStack: [
@@ -51,7 +51,7 @@ export const projects =[
         demo: 'N/A'
     },
     {
-        imageUrl: 'public/Images/Projects/client-server.png',
+        imageUrl: '/Images/Projects/client-server.png',
         id: 'client-server',
         name: 'Client-Server: File server application',
         techStack: [
