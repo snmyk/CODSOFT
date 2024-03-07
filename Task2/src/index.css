@@ -408,7 +408,7 @@
     {
         height: 400px;
     }
-    #client-server-hidden
+    #client-server-hidden, #porfolio-hidden
     {
         animation: left-reveal 1s ease-out 0s 1 normal none;
     }
@@ -428,6 +428,8 @@
     {
         animation: bottom-reveal 1s ease-out 0s 1 normal none;
     }
+    
+    
 
     .contact-list
     {
