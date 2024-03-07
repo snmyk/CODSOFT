@@ -408,7 +408,7 @@
     {
         height: 400px;
     }
-    #client-server-hidden, #porfolio-hidden
+    #client-server-hidden, #portfolio-hidden
     {
         animation: left-reveal 1s ease-out 0s 1 normal none;
     }
