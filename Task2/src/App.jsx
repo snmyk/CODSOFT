@@ -52,7 +52,7 @@ function App()
             <div className='intro-cv'>
               <p className='font-roboto text-white text-3xl pl-2.5 text-center'>Get My Resume!</p>
               <div className='flex items-center justify-center'>
-                <a target='blank' href='https://drive.google.com/file/d/191h8fDiL-wLJYV6clZoXAL7PkpVHkqlv/view?usp=drive_link'
+                <a target='blank' href='https://drive.google.com/file/d/191h8fDiL-wLJYV6clZoXAL7PkpVHkqlv/view?usp=sharing'
                   className=' text-white border-dashed h-8 m-2 w-32'>
                   Get .pdf
                 </a>
@@ -144,7 +144,7 @@ function App()
             </p>
             <p className='mb-10'>
               I am currently seeking a <span>junior/part-time</span> opportunity where I can apply my skills and further enhance them through hands-on experience. 
-              If your compnay is in need of a <span>software engineer/developer</span>, I would love to discuss how I can contribute to your team.
+              If your company is in need of a <span>software engineer/developer</span>, I would love to discuss how I can contribute to your team.
             </p>
           </div>
           <ul className='contact-list flex justify-center items-center flex-wrap w-fit mt-20 '>
