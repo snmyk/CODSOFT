@@ -52,11 +52,11 @@ function App()
             <div className='intro-cv'>
               <p className='font-roboto text-white text-3xl pl-2.5 text-center'>Get My Resume!</p>
               <div className='flex items-center justify-center'>
-                <a target='blank' href='https://drive.google.com/file/d/191h8fDiL-wLJYV6clZoXAL7PkpVHkqlv/view?usp=sharing'
+                <a target='blank' href='https://drive.google.com/file/d/1KIXCPJGZj5qX4sEw25v4iBegL4GwZSCj/view?usp=drive_link'
                   className=' text-white border-dashed h-8 m-2 w-32'>
                   Get .pdf
                 </a>
-                <a target='blank' href='https://docs.google.com/document/d/1DrJy960M3a06ynG8WX-rkV7x__Oci12P/edit?usp=drive_link&ouid=108224675991313654284&rtpof=true&sd=true'
+                <a target='blank' href='https://docs.google.com/document/d/1YTuZhpSsBIY-cV_RQFi-_5xbbGI6eClm/edit?usp=sharing&ouid=108224675991313654284&rtpof=true&sd=true'
                 className=' text-white border-dashed h-8 m-2 w-32'> 
                   Get .docx
                 </a>
