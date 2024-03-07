@@ -25,6 +25,19 @@ export const projects =[
         demo: 'https://smarttech6.netlify.app/'
     },
     {
+        imageUrl: '/Images/Projects/portfolio.png',
+        id: 'portfolio',
+        name: 'Portfolio: My Portfolio',
+        techStack: [
+            'JavaScript - React',
+            'HTML',
+            'CSS',
+            'Tailwind CSS',
+        ],
+        code: 'https://github.com/snmyk/CODSOFT/tree/main/Task2',
+        demo: 'https://sphiwenyoni.netlify.app/'
+    },
+    {
         imageUrl: '/Images/Projects/mytutor.png',
         id: 'mytutor',
         name: 'MyTutorApp: Tutor Management System',
