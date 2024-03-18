@@ -90,3 +90,35 @@ input
 {
     background-color: #1da0f28e;
 }
+@media screen and (max-width:300px) 
+{
+    #buttons
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 270px;
+        gap: 7px;
+        padding: 5px;
+    }
+}
+@media screen and (max-width:250px) 
+{
+    #buttons
+    {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        width: 230px;
+        gap: 7px;
+        padding: 5px;
+    }
+    button
+    {
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+    }
+    #del, #sin, #cos, #tan
+    {
+        font-size: 12px;
+    }
+}
