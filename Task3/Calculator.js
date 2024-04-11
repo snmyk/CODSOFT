@@ -14,13 +14,10 @@ const calculate = () =>
     let ref = expression.indexOf('k');
     while(ref >=0)
     {
-        
-        console.log('ref: ' + ref);
         //Remove any leading k values 
         if(ref === 0)
         {
-            expression = expression.substring(1);
-            console.log(expression);
+            expression = expression.substring(1);       
         } 
         //In the case of subtracting a negative number such as 1--1 (in the array represented as 1,-,k,-,1), change the expression to 1+1 for easier calculations.
         else if(expression[ref-1] === '-' && expression[ref+1] === '-')
@@ -28,15 +25,13 @@ const calculate = () =>
             let array = expression.split('');
             array.splice(ref-1, 3, '+');
             expression = array.join('');
-            console.log(expression);
         }
         //In the case where you have an operator followed by a negative value eg. 1*k-2 remove k to have 1*-2
         else if(isNaN(expression[ref-1]) && isNaN(expression[ref+1]))
         {
             let array = expression.split('');
             array.splice(ref, 1);
-            expression = array.join('');
-            console.log(expression);       
+            expression = array.join('');   
         }
         ref = expression.indexOf('k');                
     }
@@ -96,7 +91,7 @@ const calculate = () =>
     //Before doing calculation, check if the expression is not undefined due to tan(90) or tan(270) and return an error is undefined.
     if(array.indexOf('undefined')>=0)
     {
-        displayAnswer.value = 'ERROR';
+        displayAnswer.value = 'UNDEFINED';
     }
     //Continue calculation if the array does not contain an empty string, since an empty string will mess up the calculations
     else if (array.indexOf('')<0 && array.indexOf('')!=array.length) 
@@ -143,6 +138,7 @@ const calculate = () =>
             catch(e)
             {
                 displayAnswer.value = 'ERROR';
+                break;
             }
             
         }
@@ -181,12 +177,11 @@ const calculate = () =>
                     subAnswer = eval(subExpression);
                     array.splice(multiply-1, 3, subAnswer);
                 }
-                
-                console.log(array);
                 multiply = array.indexOf('*');
             } catch (error) 
             {
                 displayAnswer.value = 'ERROR';
+                break;
             }
             
         }
@@ -228,7 +223,8 @@ const calculate = () =>
                 add = array.indexOf('+');
             } catch (error) 
             {
-                displayAnswer.value = 'ERROR';        
+                displayAnswer.value = 'ERROR';
+                break;        
             }
             
         }
@@ -257,7 +253,6 @@ const calculate = () =>
                     
                     subExpression = array[subtract-2] + array[subtract-1] + '-' + array[subtract+1];
                     subAnswer = eval(subExpression);
-                    console.log(subExpression);
                     array.splice(subtract-2, 4, subAnswer);
                 }
                 //eg. 1--1
@@ -277,52 +272,50 @@ const calculate = () =>
                 subtract = array.indexOf('-');
             } catch (error) 
             {
-                displayAnswer.value = 'ERROR';        
+                displayAnswer.value = 'ERROR';      
+                break;  
             }           
         }
-    } 
-    else 
-    {
-        displayAnswer.value = 'ERROR';     
-    }
-    /* 
+        /* 
         Workout the final answer if the array size is greater than 1.
         Remember that -1/-2 will return an array like this: [a, b, 0.5, c, d].
         Lets assume the actual array is like this: [1, *, 2, 0.5, -, 3, +; 4] the the following steps would return the arrays below, respective of BODMAS:
         [2, 0.5, -, 3, +, 4]
         [2, 0.5, 1]
         To get the final answer we just add the elements of the array together and the result would be 3.5
-    */
-    if(array.length >1)
-    {
-        let currentAnswer = 0;
-        let subExp = '';
-        if(array[0] == '-')
+        */
+        if(array.length >1)
         {
-            array.unshift(0);
-            for (let index = 0; index < array.length; index++) 
+            let currentAnswer = 0;
+            let subExp = '';
+            if(array[0] == '-')
             {
-                subExp += array[index];     
+                array.unshift(0);
+                for (let index = 0; index < array.length; index++) 
+                {
+                    subExp += array[index];     
+                }
+                subAnswer = eval(subExp);
+                displayAnswer.value = subAnswer;
             }
-            subAnswer = eval(subExp);
-            displayAnswer.value = subAnswer;
+            else
+            {
+                for (let index = 0; index < array.length; index++) 
+                {
+                    currentAnswer += eval(array[index]);     
+                }
+                displayAnswer.value = currentAnswer ;
+            }
         }
         else
         {
-            for (let index = 0; index < array.length; index++) 
-            {
-                currentAnswer += eval(array[index]);     
-            }
-            displayAnswer.value = currentAnswer ;
+            displayAnswer.value =  array[0];
         }
-        
-        
-    }
-    else
+    } 
+    else 
     {
-        displayAnswer.value =  array[0];
-    }
-    
+        displayAnswer.value = 'ERROR';     
+    }  
 }
 
 const display = (value) =>
