@@ -104,16 +104,21 @@ function App()
           <div className='skills-info flex justify-center items-center mt-5'>
             <div className='skills-list'>
               <p className='inline'>Java</p>
+              <p className='inline'>C#</p>
+              <p className='inline-block'>Python</p><br/>
               <p className='inline'>Java Springboot</p>
-              <p>Python</p>
+              <p className='inline'>Python-django</p>
+              <p className='inline'>Umbraco CMS</p>
+              <p className='inline-block'>Radzen Blazor</p><br/>
               <p className='inline'>JavaScript</p>
               <p className='inline'>React</p>
               <p className='inline'>HTML</p>
               <p className='inline'>CSS</p>
-              <p>Tailwind CSS</p>
+              <p className='inline-block'>Tailwind CSS</p><br/>
               <p className='inline'>Git/Gitlab</p>
               <p className='inline'>MySQL</p>
-              <p>Web development</p>
+              <p className='inline'>Web development</p>
+              <p className='inline'>Azure</p>
             </div>
             <div className='flex justify-center items-center'>
               <img src='/Images/Icons/skills-image.png' alt='picture'/>
