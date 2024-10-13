@@ -120,9 +120,6 @@ function App()
               <p className='inline'>Web development</p>
               <p className='inline'>Azure</p>
             </div>
-            <div className='flex justify-center items-center'>
-              <img src='/Images/Icons/skills-image.png' alt='picture'/>
-            </div>
 
           </div>
         </section>
